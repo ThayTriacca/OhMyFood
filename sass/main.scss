@@ -1,0 +1,68 @@
+@import "./base/base";
+@import "./utils/utils";
+@import "./components/components";
+
+.location{
+    margin: 20px 0px;
+    background-color: $color-background;
+    @include flexbox;
+    width: 100%;
+    height: fit-content;
+}
+
+.fa-solid{
+    padding: 15px;
+}
+
+.book{
+    @include flexbox;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.options{
+    @include text-space;
+    &__cards{
+        @include flexbox;
+        column-gap: 25px;
+    }
+    &__li{
+        background-color: $color-background;
+        border-radius: 25px;
+        width: fit-content;
+        padding: 25px;
+        @include flexbox-space;
+        column-gap: 30px;
+    }
+}
+
+.restaurantscontainer {
+    @include text-space;
+    background-color: $color-background;
+}
+
+.restaurants{
+    @include flexbox;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px;
+    &__card{
+        width: fit-content;
+        height: fit-content;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 1px 1px 3px grey;
+    }
+}
+
+.card__img {
+    max-width: 100%;
+    width: 440px;
+    max-height: 100%;
+    height: 150px;
+    border-radius: 20px 20px 0 0;
+}
+
+.card__info{
+    padding: 10px;
+}
