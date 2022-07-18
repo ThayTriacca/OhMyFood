@@ -16,10 +16,31 @@
     width: 400px;
 }
 
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-family: 'Shrikhand', cursive;
+    font-size: 90px;
+    @media only screen and (max-width: 768px) {
+    font-size: 40px;
+    }
+}
+
 h2{
     font-size: 35px;
     font-weight: bolder;
+    @media only screen and (max-width: 768px) {
+        font-size: 30px;
+    }
 }
+
+h3{
+    color: #ffff;
+    font-family: 'Shrikhand', cursive;
+}
+
 ul{
     list-style-type: none;
 }
@@ -27,4 +48,11 @@ ul{
 @mixin text-space {
     width: 100%;
     padding: 15px;
+}
+
+footer{
+    background-color: #3d3c3d;
+    color: #ffff;
+    font-size: 20px;
+    @include text-space;
 }

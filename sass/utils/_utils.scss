@@ -15,3 +15,11 @@ $color-background: #f3f3f3;
     justify-content: space-evenly;
     align-content: center;
 }
+
+@mixin flexbox-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    row-gap: 20px;
+}
