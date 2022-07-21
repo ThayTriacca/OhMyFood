@@ -43,6 +43,10 @@
         display: flex;
         column-gap: 30px;
         box-shadow: 1px 1px 3px grey;
+        &:hover{
+            box-shadow: 5px 5px 3px grey;  
+            cursor: pointer;
+        }
     }
 }
 
@@ -62,7 +66,21 @@
         background-color: #ffffff;
         border-radius: 20px;
         box-shadow: 1px 1px 3px grey;
+        position: relative;
+        &:hover{
+         box-shadow: 5px 5px 3px grey;
+        }
     }
+}
+.card__newtag{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width:85px;
+    padding:10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $color-tertiary;
 }
 
 .card__img {
@@ -80,7 +98,25 @@
     display: flex;
     justify-content: space-between;
 }
+.restaurants__lovebtn--empty{
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 25px;
+    opacity: 1;
+}
 
+.restaurants__lovebtn--full{
+    display: block;
+    position: absolute;
+    right: -5px;
+    bottom: 20px;
+    opacity: 0;
+    &:hover,  &:active{
+        opacity: 1;
+    }
+
+}
 .restaurant__page{
     background-color: $color-background;
 }

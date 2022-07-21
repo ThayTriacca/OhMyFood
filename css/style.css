@@ -67,9 +67,14 @@ a:visited {
 
 .btn {
   border-radius: 40px;
+  border-color: transparent;
   padding: 20px;
   background: linear-gradient(#9356DC, #FF79DA);
   color: white;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 2px 2px 3px #FF79DA;
 }
 
 .btn__order {
@@ -80,6 +85,13 @@ a:visited {
   width: 300px;
   margin: 20px;
   font-size: 24px;
+}
+
+.heartbtn::before {
+  background: -webkit-radial-gradient(33% 100% circle, #9356DC 4%, #FF79DA 85%);
+  background: radial-gradient(circle at 33% 100%, #9356DC 4%, #FF79DA 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .location {
@@ -147,6 +159,10 @@ a:visited {
   column-gap: 30px;
   box-shadow: 1px 1px 3px grey;
 }
+.options__li:hover {
+  box-shadow: 5px 5px 3px grey;
+  cursor: pointer;
+}
 
 .restaurantscontainer {
   width: 100%;
@@ -169,6 +185,21 @@ a:visited {
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 1px 1px 3px grey;
+  position: relative;
+}
+.restaurants__card:hover {
+  box-shadow: 5px 5px 3px grey;
+}
+
+.card__newtag {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 85px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #99E2D0;
 }
 
 .card__img {
@@ -187,6 +218,25 @@ a:visited {
   padding: 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.restaurants__lovebtn--empty {
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 25px;
+  opacity: 1;
+}
+
+.restaurants__lovebtn--full {
+  display: block;
+  position: absolute;
+  right: -5px;
+  bottom: 20px;
+  opacity: 0;
+}
+.restaurants__lovebtn--full:hover, .restaurants__lovebtn--full:active {
+  opacity: 1;
 }
 
 .restaurant__page {
