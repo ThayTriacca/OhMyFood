@@ -1,8 +1,13 @@
 .btn {
     border-radius: 40px;
+    border-color: transparent;
     padding: 20px;
     background: linear-gradient($color-primary, $color-secondary);
     color: #ffff;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 2px 2px 3px $color-secondary;
+    }
 }
 
 .btn__order{
@@ -15,3 +20,9 @@
     font-size: 24px;
 }
 
+.heartbtn::before{
+    background: -webkit-radial-gradient(33% 100% circle, $color-primary 4%, $color-secondary 85%);
+	background: radial-gradient(circle at 33% 100%, $color-primary 4%, $color-secondary 85%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
