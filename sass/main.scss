@@ -27,6 +27,9 @@
     &__cards{
         @include flexbox;
         column-gap: 25px;
+        @media only screen and (min-width: 768px) and (max-width: 991px){
+            @include flexbox-column;
+        }
         @media only screen and (max-width: 768px){
             @include flexbox-column;
             padding-top: 20px;
@@ -78,6 +81,10 @@
     justify-content: space-between;
 }
 
+.restaurant__page{
+    background-color: $color-background;
+}
+
 .restaurant_img{
     width: 100%;
     height: 450px;
@@ -92,15 +99,24 @@
 .menu{
     background-color: $color-background;
     width: 100%;
+    @media only screen and (max-width: 768px){
+        padding: 15px ;
+    }
     &__header{
         @include flexbox;
         justify-content: space-between;
         background-color: $color-background;
-        padding: 20px;
+        padding: 45px;
+        border-radius: 80px 80px 0px 0px;
+        position: relative;
+        margin-top: -70px;
     }
 
     &__titles{
         background-color: $color-background;
+        padding: 20px ;
+        padding-bottom: 10px;
+        text-transform: uppercase;
     }
 
     &__card{
@@ -114,8 +130,40 @@
     }
 }
 
+
+.menu__titles--line{
+    font-size: 20px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu__titles--line::after{
+    content: ' ';
+    width: 60px;
+    height: 3px;
+    position: absolute;
+    background-color: $color-tertiary;
+    display: block;
+    margin: 10px auto;
+}
+
 .btn__container{
     background-color: $color-background;
     @include flexbox;
 }
 
+.fa-3x{
+    @media only screen and (max-width: 768px){
+        font-size: 2em;
+    }
+}
+
+.header__restaurant{
+    @include flexbox-space;
+    margin-top: 25px;
+}
+
+.arrowback{
+    @include flexbox-arrow;
+    width: fit-content;
+}

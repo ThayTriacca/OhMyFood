@@ -6,7 +6,6 @@
 }
 
 .containerlogo{
-    margin-top: 30px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -54,4 +53,13 @@ footer{
 }
 .containerlogo {
     width: 100%;
+}
+
+a{
+    cursor: pointer;
+    color: #000;
+    &:visited{
+        text-decoration: none;
+        color: #000;
+    }
 }
