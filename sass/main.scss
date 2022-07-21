@@ -62,7 +62,18 @@
         background-color: #ffffff;
         border-radius: 20px;
         box-shadow: 1px 1px 3px grey;
+        position: relative;
     }
+}
+.card__newtag{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width:85px;
+    padding:10px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: $color-tertiary;
 }
 
 .card__img {
