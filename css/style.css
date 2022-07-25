@@ -94,6 +94,16 @@ a:visited {
   -webkit-text-fill-color: transparent;
 }
 
+@keyframes animate-appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
 .location {
   margin: 20px 0px 0px 0px;
   background-color: #dbdbdb;
@@ -162,6 +172,8 @@ a:visited {
 .options__li:hover {
   box-shadow: 5px 5px 3px grey;
   cursor: pointer;
+  background-color: #e4d5f6;
+  color: #9356DC;
 }
 
 .restaurantscontainer {
@@ -292,6 +304,56 @@ a:visited {
   padding: 20px;
   border-radius: 20px;
   margin: 20px;
+  animation: animate-appear 0.5s;
+  animation-fill-mode: backwards;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+}
+.menu__card--hidden {
+  background-color: #99E2D0;
+  width: 80px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.delay01 {
+  animation-delay: 0.6s;
+}
+
+.delay02 {
+  animation-delay: 0.7s;
+}
+
+.delay03 {
+  animation-delay: 0.8s;
+}
+
+.delay04 {
+  animation-delay: 0.9s;
+}
+
+.delay05 {
+  animation-delay: 0.9s;
+}
+
+.delay06 {
+  animation-delay: 0.9s;
+}
+
+.delay07 {
+  animation-delay: 1s;
+}
+
+.delay08 {
+  animation-delay: 1.1s;
+}
+
+.delay09 {
+  animation-delay: 1.2s;
+}
+
+.delay10 {
+  animation-delay: 1.3s;
 }
 
 .menu__titles--line {
@@ -308,6 +370,10 @@ a:visited {
   background-color: #99E2D0;
   display: block;
   margin: 10px auto;
+}
+
+.fa-circle-check {
+  color: #ffffff;
 }
 
 .btn__container {
