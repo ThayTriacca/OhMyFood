@@ -65,7 +65,7 @@
     margin: 20px;
     &__card{
         width: fit-content;
-        height: fit-content;
+        height: 300px;
         background-color: #ffffff;
         border-radius: 20px;
         box-shadow: 1px 1px 3px grey;
@@ -88,7 +88,7 @@
 
 .card__img {
     width: 550px;
-    height: 150px;
+    height: 230px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
     @media only screen and (max-width: 768px){
@@ -133,6 +133,7 @@
 .menu__container{
     background-color: $color-background;
     border-radius: 80px 80px 0 0;
+    width: 100%;
 }
 
 .menu{
@@ -158,6 +159,11 @@
         text-transform: uppercase;
     }
 
+    &__food{
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
     &__card{
         background-color: #ffffff;
         @include flexbox;
@@ -169,14 +175,46 @@
         animation: animate-appear 0.5s;
         animation-fill-mode: backwards;
         animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+        overflow: hidden;
+        position:relative;
+        cursor: pointer;
         &--hidden{
             background-color: $color-tertiary;
-            width: 80px;
-            display: flex;
-            margin:0;
-            padding: 0;
+            position: relative;
+            width: 130px;
+            height: 80px;
+            display: none;
+            margin:-20px;
+            border-radius: 0px 20px 20px 0px;
         }
     }
+}
+
+.menu__food{
+    flex: 2;
+}
+
+.food__price{
+    @include flexbox;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.menu__card:hover .food__price{
+    animation: pricesanimation 1.5s linear both;
+    animation-fill-mode: forwards;
+}
+.menu__card:hover .menu__card--hidden{
+    @include flexbox;
+    opacity: 0;
+    animation: movetoleft  2s linear both;
+    animation-fill-mode: forwards;
+}
+
+
+.iconrotation{
+    animation: rotationicon 1.8s;
+    animation-delay: 0.2s;
 }
 
 .delay01{
