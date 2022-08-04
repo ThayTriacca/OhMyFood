@@ -1,6 +1,7 @@
 @import "./base/base";
 @import "./utils/utils";
 @import "./components/components";
+@import "./layouts/layouts.scss";
 
 .location{
     margin: 20px 0px 0px 0px;
@@ -43,12 +44,31 @@
         display: flex;
         column-gap: 30px;
         box-shadow: 1px 1px 3px grey;
+        position: relative;
+        &::before{
+            counter-increment: elzero-counter;
+            content: counter(elzero-counter);
+            background: $color-primary;
+            padding: 1.5px;
+            height: 26px;
+            width: 26px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: absolute;
+            left: -14px;
+        }
         &:hover{
             box-shadow: 5px 5px 3px grey;  
             cursor: pointer;
+            background-color: #e4d5f6;
+            color: $color-primary;
         }
     }
 }
+
 
 .restaurantscontainer {
     @include text-space;
@@ -62,7 +82,7 @@
     margin: 20px;
     &__card{
         width: fit-content;
-        height: fit-content;
+        height: 300px;
         background-color: #ffffff;
         border-radius: 20px;
         box-shadow: 1px 1px 3px grey;
@@ -85,7 +105,7 @@
 
 .card__img {
     width: 550px;
-    height: 150px;
+    height: 230px;
     border-radius: 20px 20px 0 0;
     object-fit: cover;
     @media only screen and (max-width: 768px){
@@ -98,6 +118,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+/*Love button changes color on hover*/
 .restaurants__lovebtn--empty{
     display: block;
     position: absolute;
@@ -115,8 +137,8 @@
     &:hover,  &:active{
         opacity: 1;
     }
-
 }
+
 .restaurant__page{
     background-color: $color-background;
 }
@@ -130,7 +152,9 @@
 .menu__container{
     background-color: $color-background;
     border-radius: 80px 80px 0 0;
+    width: 100%;
 }
+
 
 .menu{
     background-color: $color-background;
@@ -155,17 +179,103 @@
         text-transform: uppercase;
     }
 
+    &__food{
+        flex:1;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        margin:0;
+    }
+
+    &__prices{
+        font-weight:700;
+        display:flex;
+        justify-content:flex-end;
+        align-items:flex-end;
+        padding-left: 8px;
+    }
+
     &__card{
         background-color: #ffffff;
-        @include flexbox;
-        justify-content: space-between;
-        width: 95%;
-        padding: 20px;
+        padding:16px;
+        display: flex;
         border-radius:20px;
-        margin:20px;
+        margin:16px 0;
+        box-shadow:4px 4px 16px rgba(0,0,0,.1);
+        overflow:hidden;
+        cursor:pointer;
+        max-width:100%;
+        animation: animate-appear 0.5s;
+        animation-fill-mode: backwards;
+        animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+        &--hidden{
+            background-color: $color-tertiary;
+            margin:-16px -107px -16px 16px;
+            width:90px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition-duration:.5s;
+            border-radius: 0px 20px 20px 0px;
+        }
     }
 }
 
+.menu__card:hover .menu__card--hidden{
+    margin-right:-16px;
+  }  
+
+.menu__card:hover .iconrotation{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -transform:rotate (360deg);
+}
+
+.iconrotation{
+    -webkit-transition: -webkit-transform 0.8s ease-out;
+    -moz-transition: -moz-transform 0.8s ease-out;
+    -transition: -transform 0.8s ease-out;
+}
+
+.delay01{
+    animation-delay: 0.6s;
+}
+
+.delay02{
+    animation-delay: 0.7s;
+}
+
+.delay03{
+    animation-delay: 0.8s;
+}
+
+.delay04{
+    animation-delay: 0.9s;
+}
+
+.delay05{
+    animation-delay: 0.9s;
+}
+
+.delay06{
+    animation-delay: 0.9s;
+}
+
+.delay07{
+    animation-delay: 1.0s;
+}
+
+.delay08{
+    animation-delay: 1.1s;
+}
+
+.delay09{
+    animation-delay: 1.2s;
+}
+
+.delay10{
+    animation-delay: 1.3s;
+}
 
 .menu__titles--line{
     font-size: 20px;
@@ -181,6 +291,10 @@
     background-color: $color-tertiary;
     display: block;
     margin: 10px auto;
+}
+
+.fa-circle-check{
+    color:#ffffff;
 }
 
 .btn__container{
