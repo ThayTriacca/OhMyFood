@@ -126,7 +126,6 @@
     right: 10px;
     bottom: 25px;
     opacity: 1;
-    padding:20px;
 }
 
 .restaurants__lovebtn--full{
@@ -135,10 +134,13 @@
     right: -5px;
     bottom: 20px;
     opacity: 0;
-    padding: 20px;
     &:hover,  &:active{
         opacity: 1;
     }
+}
+
+.space__around{
+    padding:20px;
 }
 
 .restaurant__page{
