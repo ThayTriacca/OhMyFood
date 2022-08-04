@@ -44,6 +44,22 @@
         display: flex;
         column-gap: 30px;
         box-shadow: 1px 1px 3px grey;
+        position: relative;
+        &::before{
+            counter-increment: elzero-counter;
+            content: counter(elzero-counter);
+            background: $color-primary;
+            padding: 1.5px;
+            height: 26px;
+            width: 26px;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: absolute;
+            left: -14px;
+        }
         &:hover{
             box-shadow: 5px 5px 3px grey;  
             cursor: pointer;
@@ -52,6 +68,7 @@
         }
     }
 }
+
 
 .restaurantscontainer {
     @include text-space;
@@ -101,6 +118,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+/*Love button changes color on hover*/
 .restaurants__lovebtn--empty{
     display: block;
     position: absolute;
@@ -118,8 +137,8 @@
     &:hover,  &:active{
         opacity: 1;
     }
-
 }
+
 .restaurant__page{
     background-color: $color-background;
 }
@@ -135,6 +154,7 @@
     border-radius: 80px 80px 0 0;
     width: 100%;
 }
+
 
 .menu{
     background-color: $color-background;
@@ -205,10 +225,16 @@
     margin-right:-16px;
   }  
 
+.menu__card:hover .iconrotation{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -transform:rotate (360deg);
+}
 
 .iconrotation{
-    animation: rotationicon 2.8s;
-    animation-delay: 0.2s;
+    -webkit-transition: -webkit-transform 0.8s ease-out;
+    -moz-transition: -moz-transform 0.8s ease-out;
+    -transition: -transform 0.8s ease-out;
 }
 
 .delay01{

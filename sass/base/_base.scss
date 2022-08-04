@@ -63,3 +63,11 @@ a{
         color: #000;
     }
 }
+
+.footer__links--hover:hover, .footer__links--hover:active, .footer__links--hover:visited{
+    color: #fff;
+}
+
+body{
+    counter-reset:  elzero-counter;
+}

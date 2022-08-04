@@ -65,6 +65,14 @@ a:visited {
   color: #000;
 }
 
+.footer__links--hover:hover, .footer__links--hover:active, .footer__links--hover:visited {
+  color: #fff;
+}
+
+body {
+  counter-reset: elzero-counter;
+}
+
 .btn {
   border-radius: 40px;
   border-color: transparent;
@@ -102,17 +110,6 @@ a:visited {
   100% {
     opacity: 1;
     transform: scale(1, 1);
-  }
-}
-@keyframes rotationicon {
-  0% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(180deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 .location {
@@ -179,6 +176,22 @@ a:visited {
   display: flex;
   column-gap: 30px;
   box-shadow: 1px 1px 3px grey;
+  position: relative;
+}
+.options__li::before {
+  counter-increment: elzero-counter;
+  content: counter(elzero-counter);
+  background: #9356DC;
+  padding: 1.5px;
+  height: 26px;
+  width: 26px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  left: -14px;
 }
 .options__li:hover {
   box-shadow: 5px 5px 3px grey;
@@ -243,6 +256,7 @@ a:visited {
   justify-content: space-between;
 }
 
+/*Love button changes color on hover*/
 .restaurants__lovebtn--empty {
   display: block;
   position: absolute;
@@ -348,9 +362,16 @@ a:visited {
   margin-right: -16px;
 }
 
+.menu__card:hover .iconrotation {
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -transform: rotate 360deg;
+}
+
 .iconrotation {
-  animation: rotationicon 2.8s;
-  animation-delay: 0.2s;
+  -webkit-transition: -webkit-transform 0.8s ease-out;
+  -moz-transition: -moz-transform 0.8s ease-out;
+  -transition: -transform 0.8s ease-out;
 }
 
 .delay01 {
