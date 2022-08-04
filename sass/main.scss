@@ -160,60 +160,54 @@
     }
 
     &__food{
-        text-overflow: ellipsis;
-        overflow: hidden;
+        flex:1;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        margin:0;
+    }
+
+    &__prices{
+        font-weight:700;
+        display:flex;
+        justify-content:flex-end;
+        align-items:flex-end;
+        padding-left: 8px;
     }
 
     &__card{
         background-color: #ffffff;
-        @include flexbox;
-        justify-content: space-between;
-        width: 95%;
-        padding: 20px;
+        padding:16px;
+        display: flex;
         border-radius:20px;
-        margin:20px;
+        margin:16px 0;
+        box-shadow:4px 4px 16px rgba(0,0,0,.1);
+        overflow:hidden;
+        cursor:pointer;
+        max-width:100%;
         animation: animate-appear 0.5s;
         animation-fill-mode: backwards;
         animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
-        overflow: hidden;
-        position:relative;
-        cursor: pointer;
         &--hidden{
             background-color: $color-tertiary;
-            position: relative;
-            width: 130px;
-            height: 80px;
-            display: none;
-            margin:-20px;
+            margin:-16px -107px -16px 16px;
+            width:90px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            transition-duration:.5s;
             border-radius: 0px 20px 20px 0px;
         }
     }
 }
 
-.menu__food{
-    flex: 2;
-}
-
-.food__price{
-    @include flexbox;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.menu__card:hover .food__price{
-    animation: pricesanimation 1.5s linear both;
-    animation-fill-mode: forwards;
-}
 .menu__card:hover .menu__card--hidden{
-    @include flexbox;
-    opacity: 0;
-    animation: movetoleft  2s linear both;
-    animation-fill-mode: forwards;
-}
+    margin-right:-16px;
+  }  
 
 
 .iconrotation{
-    animation: rotationicon 1.8s;
+    animation: rotationicon 2.8s;
     animation-delay: 0.2s;
 }
 

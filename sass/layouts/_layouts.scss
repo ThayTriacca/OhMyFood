@@ -9,39 +9,6 @@
   }
 }
 
-@keyframes movetoleft{
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-
-  /*20% {
-    transform: translateX(80px);
-    opacity: 0.2;
-  }*/
-
-  50% {
-    transform: translateX(60px);
-    opacity: 0.5;
-  }
-
-  /*60% {
-    transform: translateX(40px);
-    opacity: 0.6;
-  }
-
-  80% {
-    transform: translateX(20px);
-    opacity: 0.8;
-  }*/
-
-  100% {
-    transform: translateX(0px);
-    opacity: 1;
-
-  }
-}
-
 @keyframes rotationicon{
   0% {
     transform: rotate(0deg);
@@ -52,27 +19,5 @@
 
   100%{
     transform: rotate(360deg);
-  }
-}
-
-@keyframes pricesanimation{
-  0% {
-    width: 100%;
-  }
-
-  25%{
-    width: 98%;
-  }
-
-  50%{
-    width: 95%;
-  }
-
-  75%{
-    width: 93%;
-  }
-
-  100%{
-    width: 90%;
   }
 }
