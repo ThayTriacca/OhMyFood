@@ -126,6 +126,7 @@
     right: 10px;
     bottom: 25px;
     opacity: 1;
+    padding:20px;
 }
 
 .restaurants__lovebtn--full{
@@ -134,6 +135,7 @@
     right: -5px;
     bottom: 20px;
     opacity: 0;
+    padding: 20px;
     &:hover,  &:active{
         opacity: 1;
     }
@@ -159,6 +161,7 @@
 .menu{
     background-color: $color-background;
     width: 100%;
+    padding: 20px;
     @media only screen and (max-width: 768px){
         padding: 15px ;
     }
@@ -223,7 +226,7 @@
 
 .menu__card:hover .menu__card--hidden{
     margin-right:-16px;
-  }  
+}  
 
 .menu__card:hover .iconrotation{
     -webkit-transform: rotate(360deg);
