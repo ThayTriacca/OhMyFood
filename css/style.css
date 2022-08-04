@@ -65,7 +65,7 @@ a:visited {
   color: #000;
 }
 
-.footer__links--hover:hover, .footer__links--hover:active, .footer__links--hover:visited {
+.footer__links--hover:hover, .footer__links--hover, .footer__links--hover:visited {
   color: #fff;
 }
 
