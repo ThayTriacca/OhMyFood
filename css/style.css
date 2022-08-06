@@ -93,6 +93,10 @@ body {
   width: 300px;
   margin: 20px;
   font-size: 24px;
+  cursor: pointer;
+}
+.btn__order:hover {
+  box-shadow: 2px 2px 3px #FF79DA;
 }
 
 .heartbtn::before {
