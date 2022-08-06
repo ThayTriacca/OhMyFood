@@ -298,10 +298,6 @@ body {
 
 .menu__block {
   display: flex;
-  /*
-  @media only screen and (min-width: 768px) and (max-width: 1024px){
-      flex-direction: column;
-  }*/
 }
 @media only screen and (max-width: 1024px) {
   .menu__block {
