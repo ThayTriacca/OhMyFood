@@ -149,7 +149,7 @@ body {
   align-items: center;
   column-gap: 25px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
   .options__cards {
     display: flex;
     flex-direction: column;
@@ -294,6 +294,19 @@ body {
   background-color: #f3f3f3;
   border-radius: 80px 80px 0 0;
   width: 100%;
+}
+
+.menu__block {
+  display: flex;
+  /*
+  @media only screen and (min-width: 768px) and (max-width: 1024px){
+      flex-direction: column;
+  }*/
+}
+@media only screen and (max-width: 1024px) {
+  .menu__block {
+    flex-direction: column;
+  }
 }
 
 .menu {

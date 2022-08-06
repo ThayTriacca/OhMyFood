@@ -28,7 +28,7 @@
     &__cards{
         @include flexbox;
         column-gap: 25px;
-        @media only screen and (min-width: 768px) and (max-width: 991px){
+        @media only screen and (min-width: 768px) and (max-width: 1024px){
             @include flexbox-column;
         }
         @media only screen and (max-width: 768px){
@@ -157,9 +157,19 @@
     background-color: $color-background;
     border-radius: 80px 80px 0 0;
     width: 100%;
+
 }
 
-
+.menu__block{
+    display: flex;
+    @media only screen and (max-width: 1024px){
+        flex-direction: column;
+    }
+    /*
+    @media only screen and (min-width: 768px) and (max-width: 1024px){
+        flex-direction: column;
+    }*/
+}
 .menu{
     background-color: $color-background;
     width: 100%;
