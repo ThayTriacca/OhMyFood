@@ -3,13 +3,22 @@ $color-secondary:#FF79DA;
 $color-tertiary: #99E2D0;
 $color-background: #f3f3f3;
 
-@mixin flexbox{
+@mixin flexbox ($justifyContent, $isCenter:false, $direction: row){
     display: flex;
-    justify-content: center;
+    justify-content: $justifyContent;
     align-content: center;
-    align-items: center;
+    flex-direction: $direction;
+    
+    @if $isCenter{
+        align-items: center;
+    }
+    
+    @if $direction == column{
+        row-gap:20px;
+    }
 }
 
+/*
 @mixin flexbox-space{
     display: flex;
     justify-content: space-evenly;
@@ -29,4 +38,4 @@ $color-background: #f3f3f3;
     display:flex;
     justify-content: flex-start;
     align-content: center;
-}
+}*/

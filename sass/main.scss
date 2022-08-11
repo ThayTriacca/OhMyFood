@@ -6,7 +6,7 @@
 .location{
     margin: 20px 0px 0px 0px;
     background-color: #dbdbdb;
-    @include flexbox;
+    @include flexbox (center, true);
     width: 100%;
     height: fit-content;
 }
@@ -16,9 +16,9 @@
 }
 
 .book{
-    @include flexbox;
-    flex-direction: column;
-    row-gap: 20px;
+    @include flexbox (center, true, column);
+    /*flex-direction: column;
+    row-gap: 20px;*/
     padding:25px;
     background-color: $color-background;
 }
@@ -26,13 +26,13 @@
 .options{
     @include text-space;
     &__cards{
-        @include flexbox;
+        @include flexbox (center, true);
         column-gap: 25px;
         @media only screen and (min-width: 768px) and (max-width: 1024px){
-            @include flexbox-column;
+            @include flexbox (center, true, column);
         }
         @media only screen and (max-width: 768px){
-            @include flexbox-column;
+            @include flexbox (center, true, column);
             padding-top: 20px;
         }
     }
@@ -76,7 +76,7 @@
 }
 
 .restaurants{
-    @include flexbox;
+    @include flexbox (center, true);
     flex-wrap: wrap;
     gap: 30px;
     margin: 20px;
@@ -157,7 +157,6 @@
     background-color: $color-background;
     border-radius: 80px 80px 0 0;
     width: 100%;
-
 }
 
 .menu__block{
@@ -174,7 +173,7 @@
         padding: 15px ;
     }
     &__header{
-        @include flexbox;
+        @include flexbox (center, true);
         justify-content: space-between;
         background-color: $color-background;
         padding: 45px;
@@ -310,7 +309,7 @@
 
 .btn__container{
     background-color: $color-background;
-    @include flexbox;
+    @include flexbox (center, true);
 }
 
 .fa-3x{
@@ -320,11 +319,11 @@
 }
 
 .header__restaurant{
-    @include flexbox-space;
+    @include flexbox (space-evenly, true);
     margin-top: 25px;
 }
 
 .arrowback{
-    @include flexbox-arrow;
+    @include flexbox (flex-start, true);
     width: fit-content;
 }
