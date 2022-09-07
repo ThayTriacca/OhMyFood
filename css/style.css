@@ -177,7 +177,9 @@ body {
 .loader__container {
   display: flex;
   width: 5rem;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 .loader__item {
   width: 64px;
