@@ -17,25 +17,3 @@ $color-background: #f3f3f3;
         row-gap:20px;
     }
 }
-
-/*
-@mixin flexbox-space{
-    display: flex;
-    justify-content: space-evenly;
-    align-content: center;
-    align-items:center;
-}
-
-@mixin flexbox-column {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    row-gap: 20px;
-}
-
-@mixin flexbox-arrow{
-    display:flex;
-    justify-content: flex-start;
-    align-content: center;
-}*/
