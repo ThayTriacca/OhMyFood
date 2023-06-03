@@ -3,7 +3,12 @@
 # Oh My Food
 #### Integrate a mobile website with animations in CSS
 [Oh My Food - Website](https://thaytriacca.github.io/Project3/)
-
+<br>
+<br>
+![HTML5](	https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) 
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+<br>
 # About the project
 
 Let's dive into the exciting details of this project! As part of my journey in the Web Developer program at OpenClassrooms, I embarked on an exhilarating adventure called Project #3. During this project, I dedicated my efforts to crafting an exceptional responsive website, harnessing the power of CSS3, HTML5, and the remarkable Sass CSS preprocessor.
